@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.translate-x-0 {
+    transform: translateX(0); /* Translate the element horizontally by 0 pixels (showing the element) */
+}
+.translate-x-full {
+    /* Translate the element horizontally by -100% of its own width */
+    transform: translateX(-100%); 
+}
+.transition-delay{
+    transition-delay: 300ms;
+}
+
+.hideMenu {
+    display: none; 
+}
+
+
+/* for md screens */
+@media (max-width: 1000px) {
+    .main-banner {
+      height: 500px; /* Adjust height for medium screens */
+    }
+    .section-bg {
+        height: 30vh;
+    }
+    .home-bg {
+        height:50vh;
+    }
+  
+  }
+    
+  @media (min-width: 768px){
+    .home-content-div {
+        margin-top:50px;
+    }
+    .section-content-div {
+      margin-top: 80px;
+  }
+  }
+  
+  
+  /* for sm screen */
+  @media (max-width: 700px) {
+    .home-bg {
+        height:80vh;
+    }
+    .home-content-div {
+        margin-top:70px;
+    }
+    .section-bg {
+      height: 35vh;
+  }
+  .section-content-div {
+      margin-top: 10px;
+  }
+  }  
+  
+  /* for lg screens */
+  @media (min-width: 1020px) and (max-width:1200px){
+    .home-content-div {
+        margin-top:100px;
+    }
+    .section-content-div {
+      margin-top: 100px;
+  }
+  }
+  @media (min-width: 1200px){
+    .home-content-div {
+        margin-top:150px;
+    }
+    .section-content-div {
+      margin-top: 80px;
+  }
+  }
+  
+
+  @keyframes slideInFromBottom {
+    0% {
+        /* transform: translateX(-100%); */
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        /* transform: translateX(0); */
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  .animate-slide-in {
+    animation: slideInFromBottom 2s ease-in-out forwards;
+  }

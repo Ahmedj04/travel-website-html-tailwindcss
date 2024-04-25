@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- section landing contact us -->
+    <section class='relative section-bg lg:h-96 bg-no-repeat bg-cover bg-center '
+        style="background-image:url('public/contactus.jpg')">
+
+        <!-- header nav bar -->
+        <header class='relative bg-transparent'>
+
+            <div class='md:flex md:justify-center'>
+
+                <div class='px-3 py-5 md:w-7/12 lg:w-8/12  flex justify-between md:flex-row-reverse'>
+
+                    <!-- property name div  -->
+                    <div class='lg:w-6/12 flex'>
+                        <div class='inline-block mx-auto text-center'>
+                            <p class='px-4 pt-2 text-2xl text-white font-medium uppercase'>
+                                True Flights
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- only for small and medium screen  -->
+                    <div class='my-auto lg:hidden'>
+                        <i onclick="setMenu(true)" class="text-white">
+                            <!-- <IoIosMenu size={30} color='white' /> -->
+                            Menu
+                        </i>
+                    </div>
+
+                    <!-- only for large screen  -->
+                    <div class='hidden lg:block text-white my-auto lg:px-10 lg:w-6/12'>
+                        <ul class='flex text-sm '>
+                            <li class='pr-14 '>
+                                <div class=' border-b-2 pb-2 text-center hover:text-purple-500 hover:border-purple-500'>
+                                    <a href='index.html' class='cursor-pointer '>HOME</a>
+                                </div>
+                            </li>
+                            <li class='pr-14'>
+                                <div
+                                    class=' border-b-2 pb-2  text-center hover:text-purple-500 hover:border-purple-500'>
+                                    <!-- <a href='/aboutUs' class='cursor-pointer'>ABOUT</a> -->
+                                    <a href='aboutUs.html' class='cursor-pointer'>ABOUT</a>
+                                </div>
+                            </li>
+                            <!-- <li class='pr-14'>
+                                <div
+                                    class=' border-b-2 pb-2  text-center hover:text-purple-500 hover:border-purple-500'>
+                                    <a href='faq.html' class='cursor-pointer'>FAQ</a>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class='hidden text-white md:flex md:justify-end md:my-auto md:w-5/12 lg:w-4/12'>
+
+                    <div
+                        class='flex hover:cursor-pointer hover:text-purple-500 hover:border-purple-500 border-b-2 pb-2 mr-10 margin-right'>
+                        <span class='my-auto'>
+                            <!-- <CiMail /> -->
+                        </span>
+                        <a href="contactUs.html" class='text-sm ml-2'> CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class='relative mx-7 md:mx-20'>
+            <!-- {/* Content */} -->
+            <div class='section-content-div'>
+                <div class='py-1'>
+                    <div class='text-center'>
+                        <h1
+                            class='mt-5 animate-slide-in text-white text-2xl md:text-5xl lg:text-5xl md:leading-relaxed font-normal'>
+                            Contact Us
+                        </h1>
+                        <h3 class='text-xl md:text-xl font-light text-white pt-3 animate-slide-in'>
+                            <span class='text-gray-300 cursor-pointer'>
+                                <a href="index.html" class='hover:text-purple-500'>Home</a>
+                            </span> • Contact Us
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- {/* content section */} -->
+    <section class='py-16 md:py-24'>
+        <div class='px-3 md:px-12 lg:px-20'>
+            <h3 class='font-medium text-2xl border-b inline-block pb-2 border-purple-600'>Contact details</h3>
+            <div class='pt-4 md:flex'>
+                <!-- {/* contact info div */} -->
+                <div class='md:w-6/12'>
+                    <!-- {/*contact helpline number  */} -->
+                    <div class='pb-6'>
+                        <h4 class='pb-2 text-gray-500 font-medium'>Help line</h4>
+                        <h3 class='text-purple-600 text-2xl font-medium'>+01 234 567 890</h3>
+                    </div>
+
+                    <!-- {/*contact mails */} -->
+                    <div class='pb-6'>
+                        <h4 class='pb-2 text-gray-500 font-medium'>Support Mails</h4>
+                        <h3 class='text-purple-600 text-2xl font-medium pb-2'>Customerservice@true-flights.com</h3>
+                        <h3 class='text-purple-600 text-2xl font-medium pb-2'>Ticketing@true-flights.com</h3>
+                        <h3 class='text-purple-600 text-2xl font-medium pb-2'>Reservations@true-flights.com</h3>
+                    </div>
+
+                    <!-- {/* contact hours */} -->
+                    <div class='pb-6'>
+                        <h4 class='pb-2 text-gray-500 font-medium'>Contact hour</h4>
+                        <h3 class='text-purple-600 text-2xl font-medium'>Mon-Sun: 24 hours</h3>
+                    </div>
+                </div>
+
+                <!-- {/* address map */} -->
+                <div class='md:w-6/12'>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6221.886727751323!2d-75.211578!3d38.765003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b8b90d99b44b9b%3A0xfba6eb4b8adf94b8!2s16192%20Coastal%20Hwy%2C%20Lewes%2C%20DE%2019958%2C%20USA!5e0!3m2!1sen!2sin!4v1713963700430!5m2!1sen!2sin"
+                        height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer section -->
+    <footer class='py-16 bg-slate-100'>
+        <div class='px-3 md:px-20'>
+            <!-- row  -->
+            <div class='md:flex md:gap-20 lg:gap-40'>
+
+                <!-- column 1  -->
+                <div>
+                    <!-- footer heading  -->
+                    <div class='border-b-2 border-purple-600 inline-block'>
+                        <h3 class='font-medium text-lg'>Need any help?</h3>
+                    </div>
+                    <div class='pb-8'>
+                        <div class='mt-6 pl-2 pt-1 border-l-2 border-purple-600'>
+                            <h3 class='font-medium'>Call 24/7 for any help</h3>
+                            <h3 class='pt-2 font-medium text-2xl text-purple-600'>+00 123 456 789</h3>
+                        </div>
+                        <div class='mt-6 pl-2 pt-1 border-l-2 border-purple-600'>
+                            <h3 class='font-medium'>Mail to our support team</h3>
+                            <h3 class='pt-2 font-medium text-2xl text-purple-600'>support@trueflights.com</h3>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- column 2  -->
+                <div>
+                    <!-- footer heading  -->
+                    <div class='border-b-2 border-purple-600 inline-block'>
+                        <h3 class='font-medium text-lg'>Company</h3>
+                    </div>
+                    <div class='py-5'>
+                        <ul>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="aboutUs.html">About Us</a>
+                            </li>
+                            <!-- <li class='pb-4 hover:text-purple-600'>
+                                <a href="faq.html">Faq</a>
+                            </li> -->
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="contactUs.html"> Contact</a>
+                            </li>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="privacyPolicy.html">Privacy Policy</a>
+                            </li>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="t&c.html">Terms & Conditions</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class='py-5 px-3'>
+            <h3 class='text-center font-semibold'>Copyright ©
+                <script>document.write(new Date().getFullYear())</script> All Rights Reserved
+            </h3>
+        </div>
+    </footer>
+
+    <!-- Menu for small screen -->
+    <div id="menuBox" class="hideMenu">
+        <div id="mobileMenu" class="transition-transform duration-500 ease-in-out transform  fixed inset-0 z-50">
+            <!-- Dark background overlay -->
+            <div id="darkTheme"
+                class="absolute inset-0 bg-black opacity-70 transform transition-transform duration-500 ease-in-out ">
+            </div>
+
+            <!-- Content -->
+            <div id="menuContent"
+                class="absolute inset-y-0 left-0 w-8/12 bg-white p-4 transform transition-transform duration-1000 ease-in-out ">
+                <div class="flex justify-between">
+                    <div class="inline-block">
+                        <p class="py-2 text-lg font-medium uppercase">True Flights</p>
+                    </div>
+                    <button onclick="closeMobileMenu()">
+                        Close
+                    </button>
+                </div>
+
+                <div>
+                    <ul class="pt-5">
+                        <li class="pb-2"><a href="index.html">Home</a></li>
+                        <li class="pb-2"><a href="aboutUs.html">About</a></li>
+                        <!-- <li class="pb-2"><a href="faq.html">Faq</a></li> -->
+                        <li class="pb-2"><a href="contactUs.html">Contact</a></li>
+                        <li class="pb-2"><a href="privacyPolicy.html">Privacy Policy</a></li>
+                        <li class="pb-2"><a href="t&c.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- section landing about us -->
+    <section class='relative section-bg lg:h-96 bg-no-repeat bg-cover bg-center '
+        style="background-image:url('public/aboutus.png')">
+
+        <!-- header nav bar -->
+        <header class='relative bg-transparent'>
+
+            <div class='md:flex md:justify-center'>
+
+                <div class='px-3 py-5 md:w-7/12 lg:w-8/12  flex justify-between md:flex-row-reverse'>
+
+                    <!-- property name div  -->
+                    <div class='lg:w-6/12 flex'>
+                        <div class='inline-block mx-auto text-center'>
+                            <p class='px-4 pt-2 text-2xl text-white font-medium uppercase'>
+                                True Flights
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- only for small and medium screen  -->
+                    <div class='my-auto lg:hidden'>
+                        <i onclick="setMenu(true)" class="text-white">
+                            <!-- <IoIosMenu size={30} color='white' /> -->
+                            Menu
+                        </i>
+                    </div>
+
+                    <!-- only for large screen  -->
+                    <div class='hidden lg:block text-white my-auto lg:px-10 lg:w-6/12'>
+                        <ul class='flex text-sm '>
+                            <li class='pr-14 '>
+                                <div class=' border-b-2 pb-2 text-center hover:text-purple-500 hover:border-purple-500'>
+                                    <a href='index.html' class='cursor-pointer '>HOME</a>
+                                </div>
+                            </li>
+                            <li class='pr-14'>
+                                <div
+                                    class=' border-b-2 pb-2  text-center hover:text-purple-500 hover:border-purple-500'>
+                                    <!-- <a href='/aboutUs' class='cursor-pointer'>ABOUT</a> -->
+                                    <a href='aboutUs.html' class='cursor-pointer'>ABOUT</a>
+                                </div>
+                            </li>
+                            <!-- <li class='pr-14'>
+                                <div
+                                    class=' border-b-2 pb-2  text-center hover:text-purple-500 hover:border-purple-500'>
+                                    <a href='faq.html' class='cursor-pointer'>FAQ</a>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class='hidden text-white md:flex md:justify-end md:my-auto md:w-5/12 lg:w-4/12'>
+
+                    <div
+                        class='flex hover:cursor-pointer hover:text-purple-500 hover:border-purple-500 border-b-2 pb-2 mr-10 margin-right'>
+                        <span class='my-auto'>
+                            <!-- <CiMail /> -->
+                        </span>
+                        <a href="contactUs.html" class='text-sm ml-2'> CONTACT US</a>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class='relative mx-7 md:mx-20'>
+            <!-- {/* Content */} -->
+            <div class='section-content-div'>
+                <div class='py-1'>
+                    <div class='text-center'>
+                        <h1
+                            class='mt-5 animate-slide-in text-white text-2xl md:text-5xl lg:text-5xl md:leading-relaxed font-normal'>
+                            About Us
+                        </h1>
+                        <h3 class='text-xl md:text-xl font-light text-white pt-3 animate-slide-in'>
+                            <span class='text-gray-300 cursor-pointer'>
+                                <a href="index.html" class='hover:text-purple-500'>Home</a>
+                            </span> • About Us
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- {/* content section */} -->
+    <section class='py-16 md:py-24'>
+        <div class='px-3 md:px-20'>
+            <!-- {/* row */} -->
+            <div class='lg:flex'>
+                <!-- {/* column 1 (About us content) */} -->
+                <div class='px-3 lg:w-6/12'>
+                    <div>
+                        <h3 class='text-xl font-medium border-b pb-2 border-purple-600 inline-block'>About us</h3>
+                        <h2 class='pt-5 text-4xl font-medium'>We Are The World Best Travel Agency Company Since 2000
+                        </h2>
+                        <p class='pt-4 text-slate-500'>At True Flights, we are passionate about travel. We believe that
+                            journeys can be life enriching and are happy to assist you in making your travel
+                            arrangements. From exotic beach destinations to places brimming with a rich cultural
+                            heritage, we help our customers find the perfect trip in absolutely any part of the world.
+                        </p>
+                        <p class='pt-4 text-slate-500'>Traveling within a specific budget is not only desired but also
+                            necessary for you to get the most out of your vacation. Having a deep understanding of all
+                            the factors of traveling, we are committed towards our objective of making your travel
+                            desires come true. In our travel portal, you can search a wide array of flight, hotel and
+                            rental car deals at prices that fit your budget.</p>
+                        <p class='pt-4 text-slate-500'>We roll out competitive prices on flight tickets, hotel rooms and
+                            rental cars from some of the most trusted global brands. We offer you exciting deals to
+                            kick-off your vacation, so that it doesn't put a hole in your pocket. You can rest assured
+                            that along with price savings, you get to enjoy the exceptional services we provide to you
+                            throughout the duration of your trip.</p>
+                        <p class='pt-4 text-slate-500'>Still wondering why you should book with us? We have a
+                            hassle-free booking process that can land you amazing travel deals. If you are tired of
+                            searching for the best fares, True Flights is here to help you. Simply email at
+                            support@trueflights.com and see if we can beat the best price you've found.</p>
+                        <div class='mt-6'>
+                            <button onclick="navigateToContactUs()" type="submit"
+                                class=' p-4 bg-purple-600 rounded-md w-32 text-white text-lg cursor-pointer hover:bg-gray-800 hover:transition-bg hover:duration-300 ease-in'>Contact
+                                us</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- {/* column 2  (pic)*/} -->
+                <div class='px-3 lg:w-6/12'>
+                    <div class='pt-14'>
+                        <Image src='public/about1.png' alt="aboutus" width={500} height={500} class='md:w-full' />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- footer section -->
+    <footer class='py-16 bg-slate-100'>
+        <div class='px-3 md:px-20'>
+            <!-- row  -->
+            <div class='md:flex md:gap-20 lg:gap-40'>
+
+                <!-- column 1  -->
+                <div>
+                    <!-- footer heading  -->
+                    <div class='border-b-2 border-purple-600 inline-block'>
+                        <h3 class='font-medium text-lg'>Need any help?</h3>
+                    </div>
+                    <div class='pb-8'>
+                        <div class='mt-6 pl-2 pt-1 border-l-2 border-purple-600'>
+                            <h3 class='font-medium'>Call 24/7 for any help</h3>
+                            <h3 class='pt-2 font-medium text-2xl text-purple-600'>+00 123 456 789</h3>
+                        </div>
+                        <div class='mt-6 pl-2 pt-1 border-l-2 border-purple-600'>
+                            <h3 class='font-medium'>Mail to our support team</h3>
+                            <h3 class='pt-2 font-medium text-2xl text-purple-600'>support@trueflights.com</h3>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- column 2  -->
+                <div>
+                    <!-- footer heading  -->
+                    <div class='border-b-2 border-purple-600 inline-block'>
+                        <h3 class='font-medium text-lg'>Company</h3>
+                    </div>
+                    <div class='py-5'>
+                        <ul>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="aboutUs.html">About Us</a>
+                            </li>
+                            <!-- <li class='pb-4 hover:text-purple-600'>
+                                <a href="faq.html">Faq</a>
+                            </li> -->
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="contactUs.html"> Contact</a>
+                            </li>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="privacyPolicy.html">Privacy Policy</a>
+                            </li>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="t&c.html">Terms & Conditions</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class='py-5 px-3'>
+            <h3 class='text-center font-semibold'>Copyright ©
+                <script>document.write(new Date().getFullYear())</script> All Rights Reserved
+            </h3>
+        </div>
+    </footer>
+
+
+    <!-- Menu for small screen -->
+    <div id="menuBox" class="hideMenu">
+        <div id="mobileMenu" class="transition-transform duration-500 ease-in-out transform  fixed inset-0 z-50">
+            <!-- Dark background overlay -->
+            <div id="darkTheme"
+                class="absolute inset-0 bg-black opacity-70 transform transition-transform duration-500 ease-in-out ">
+            </div>
+
+            <!-- Content -->
+            <div id="menuContent"
+                class="absolute inset-y-0 left-0 w-8/12 bg-white p-4 transform transition-transform duration-1000 ease-in-out ">
+                <div class="flex justify-between">
+                    <div class="inline-block">
+                        <p class="py-2 text-lg font-medium uppercase">True Flights</p>
+                    </div>
+                    <button onclick="closeMobileMenu()">
+                        Close
+                    </button>
+                </div>
+
+                <div>
+                    <ul class="pt-5">
+                        <li class="pb-2"><a href="index.html">Home</a></li>
+                        <li class="pb-2"><a href="aboutUs.html">About</a></li>
+                        <!-- <li class="pb-2"><a href="faq.html">Faq</a></li> -->
+                        <li class="pb-2"><a href="contactUs.html">Contact</a></li>
+                        <li class="pb-2"><a href="privacyPolicy.html">Privacy Policy</a></li>
+                        <li class="pb-2"><a href="t&c.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- home landing -->
+    <section id='home' class='z-10 relative'>
+        <div class='relative home-bg lg:h-screen'>
+            <!-- this div is used to set the bg-image and set the opacity for it  -->
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-no-repeat bg-cover bg-center"
+                    style="background-image:url('public/home.png')">
+                </div>
+                <div class="absolute inset-0 "></div>
+            </div>
+
+
+            <!-- header nav bar -->
+            <header class='relative bg-transparent'>
+
+                <div class='md:flex md:justify-center'>
+
+                    <div class='px-3 py-5 md:w-7/12 lg:w-8/12  flex justify-between md:flex-row-reverse'>
+
+                        <!-- property name div  -->
+                        <div class='lg:w-6/12 flex'>
+                            <div class='inline-block mx-auto text-center'>
+                                <p class='px-4 pt-2 text-2xl text-white font-medium uppercase'>
+                                    True Flights
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- only for small and medium screen  -->
+                        <div class='my-auto lg:hidden'>
+                            <i onclick="setMenu(true)" class="text-white">
+                                <!-- <IoIosMenu size={30} color='white' /> -->
+                                Menu
+                            </i>
+                        </div>
+
+                        <!-- only for large screen  -->
+                        <div class='hidden lg:block text-white my-auto lg:px-10 lg:w-6/12'>
+                            <ul class='flex text-sm '>
+                                <li class='pr-14 '>
+                                    <div
+                                        class=' border-b-2 pb-2 text-center hover:text-purple-500 hover:border-purple-500'>
+                                        <a href='index.html' class='cursor-pointer '>HOME</a>
+                                    </div>
+                                </li>
+                                <li class='pr-14'>
+                                    <div
+                                        class=' border-b-2 pb-2  text-center hover:text-purple-500 hover:border-purple-500'>
+                                        <!-- <a href='/aboutUs' class='cursor-pointer'>ABOUT</a> -->
+                                        <a href='aboutUs.html' class='cursor-pointer'>ABOUT</a>
+                                    </div>
+                                </li>
+                                <!-- <li class='pr-14'>
+                                    <div
+                                        class=' border-b-2 pb-2  text-center hover:text-purple-500 hover:border-purple-500'>
+                                        <a href='faq.html' class='cursor-pointer'>FAQ</a>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class='hidden text-white md:flex md:justify-end md:my-auto md:w-5/12 lg:w-4/12'>
+
+                        <div
+                            class='flex hover:cursor-pointer hover:text-purple-500 hover:border-purple-500 border-b-2 pb-2 mr-10 margin-right'>
+                            <span class='my-auto'>
+                                <!-- <CiMail /> -->
+                            </span>
+                            <a href="contactUs.html" class='text-sm ml-2'> CONTACT US</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- content div -->
+            <div class=' relative mx-7 md:mx-20'>
+                <!-- content  -->
+                <div>
+                    <div class='home-content-div'>
+                        <div class='py-20'>
+                            <div class='text-center'>
+                                <h1
+                                    class='mt-5 animate-slide-in text-white text-4xl  md:text-5xl lg:text-7xl md:leading-relaxed font-normal font-family-marcellus'>
+                                    Explore the world together
+                                </h1>
+                                <h3 class='text-2xl font-light text-white pt-3 animate-slide-in'>
+                                    Find awesome flights, hotel, tour, car and packages
+                                </h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- flights booking  -->
+    <section class='flex justify-center z-20 relative mt-[-50px]'>
+        <div class='w-11/12 rounded-3xl shadow-2xl border-2 mb-10 bg-white'>
+            <div class='p-10'>
+
+                <!-- Flight filters -->
+                <div class='text-center pb-5 md:pb-10 lg:pb-10 lg:flex lg:justify-between'>
+                    <div class='inline-block lg:block pb-5 lg:pb-0'>
+                        <div class='rounded-md bg-purple-600 text-white p-2 flex'>
+                            <!-- <MdOutlineFlightTakeoff class='my-auto' /> -->
+                            <!-- <span class='pl-2'>Flights</span> -->
+                            <span class="px-2">Flights</span>
+                        </div>
+                    </div>
+
+                    <div class='lg:my-auto'>
+                        <span id="oneWay" class="pr-5 font-medium cursor-pointer"
+                            onclick="handleTripTypeClick('oneWay')">One Way</span>
+                        <span id="roundTrip" class="font-medium cursor-pointer"
+                            onclick="handleTripTypeClick('roundTrip')">Round Trip</span>
+                    </div>
+                </div>
+
+                <!-- Flights form grid  -->
+                <div class='grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+                    <!--  Flight from  -->
+                    <div class='bg-slate-200 rounded-md p-4'>
+                        <div class='flex justify-between'>
+                            <span class='text-gray-500'>From</span>
+                            <!-- <MdOutlineFlightTakeoff size={30} /> -->
+                        </div>
+                        <input id="flightFromInput" class='bg-transparent border-none outline-none py-2 w-full'
+                            placeholder="JFK-John F.Kennedy International.." />
+                        <!-- <p class='text-xs pt-2'>e.g. JFK-John F.Kennedy International..</p> -->
+                    </div>
+
+                    <!-- Flight to  -->
+                    <div class='bg-slate-200 rounded-md p-4'>
+                        <div class='flex justify-between'>
+                            <span class='text-gray-500'>To</span>
+                            <!-- <MdFlightLand size={30} /> -->
+                        </div>
+                        <input id="flightToInput" class='bg-transparent border-none outline-none py-2 w-full'
+                            placeholder="LCY, london city airport" />
+                        <!-- <p class='text-xs pt-2'>e.g. LCY, london city airport</p> -->
+                    </div>
+
+                    <!-- Journey date  -->
+                    <div class='bg-slate-200 rounded-md p-4'>
+                        <div class='flex justify-between'>
+                            <span class='text-gray-500'>Journey date</span>
+                        </div>
+                        <input type='date' class='bg-transparent border-none outline-none py-2 w-full' />
+                        <p class='text-xs pt-2'>Thursday</p>
+                    </div>
+
+                    <!-- Passenger class  -->
+                    <!-- <div class='bg-slate-200 rounded-md p-4'>
+                        <div class='flex justify-between'>
+                            <span class='text-gray-500'>Passenger class</span>
+                        </div>
+                        <p class='font-medium text-lg pt-2'>0 Passenger</p>
+                        <p class='text-xs pt-2'>Business</p>
+                    </div> -->
+                    <div id="passengerClassContainer" class="bg-slate-200 rounded-md p-4">
+                        <div>
+                            <span class="text-gray-500">Passenger class</span>
+                        </div>
+                        <p id="selectedClassText" class="font-medium text-lg pt-2">Business Passenger</p>
+                        <select id="classSelect" class="text-xs pt-1 mt-2 outline-none">
+                            <option value="Economy">Economy</option>
+                            <option value="Business" selected>Business</option>
+                            <option value="First Class">First Class</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!--  Error message  -->
+                <p id="errorText" class="text-red-500 pt-10 text-center"></p>
+
+                <!-- {/* search button */} -->
+                <div class='flex justify-center pt-10'>
+                    <button onclick="handleSearch()" type="submit"
+                        class=' p-4 bg-purple-600 rounded-md w-32 text-white text-lg cursor-pointer hover:bg-gray-800 hover:transition-bg hover:duration-300 ease-in'>Search</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- {/* destinations */} -->
+    <section>
+        <div class='lg:py-14 lg:px-10'>
+
+            <!-- {/* section heading */} -->
+            <div class='flex justify-center'>
+                <div>
+                    <h2 class='text-4xl font-medium pb-3'>Top destinations</h2>
+                    <div class='flex justify-center'>
+                        <span class='w-3/4 border-b border-purple-600'></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- {/* destination photos */} -->
+            <div class='md:overflow-x-auto px-10 lg:px-0 my-8 '>
+                <div class='lg:flex lg:justify-between'>
+
+                    <div class="main-banner relative mb-16 lg:mb-0  lg:h-screen lg:w-5/12  rounded-2xl overflow-hidden">
+                        <!-- {/* Background Image with Purple Overlay */} -->
+                        <div class="h-full bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105 relative"
+                            style="background-image:url('public/dest1.png')">
+                            <!-- {/* Purple overlay */} -->
+                            <div
+                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                            </div>
+                        </div>
+
+                        <!-- {/* Content */} -->
+                        <div>
+
+                            <div class="absolute  text-white z-10 pointer-events-none" style="left: 20%; top: 25%;">
+                                <!-- {/* Content inside the div */} -->
+                                <div class="text-4xl my-auto font-medium">
+                                    <p>Up to</p>
+
+                                    <p class='md:py-5 lg:py-10'><span class="font-semibold text-7xl">50</span>% off</p>
+
+                                    <p> Holiday packages</p>
+                                </div>
+
+                            </div>
+                            <div class="absolute" style="bottom: 14%; left: 20%;">
+                                <button onclick="navigateToContactUs()" type="submit"
+                                    class=' p-4 bg-purple-600 rounded-md w-32 text-white text-lg cursor-pointer hover:bg-gray-800 hover:transition-bg hover:duration-300 ease-in'>Book
+                                    now</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- {/* other columns (3 COLUMNS) */} -->
+                    <div class='lg:w-7/12'>
+                        <div class='lg:pl-10'>
+                            <div class='md:flex justify-evenly lg:justify-normal  lg:gap-5'>
+                                <!-- {/* column 1 */} -->
+                                <div class='flex gap-5 flex-col pb-5 md:pb-0'>
+                                    <!-- {/* row 1 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative h-72 md:h-44 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest2.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>New York</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- {/* row 2 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative h-72 md:h-44 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest5.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>Florida</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- {/* row 3 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative h-96 md:h-64 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest6.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>Hawaii</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- {/* column 2 */} -->
+                                <div class='flex gap-5 flex-col pb-5 md:pb-0'>
+                                    <!-- {/* row 1 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative h-80 md:h-64 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest3.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>Washington</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- {/* row 2 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative h-96 md:h-48 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest7.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>California</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- {/* row 3 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative  h-80 md:h-44 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest8.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>Texas</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- {/* column 3 */} -->
+                                <div class='flex gap-5 flex-col pb-5 md:pb-0'>
+                                    <!-- {/* row 1 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative h-96 md:h-64 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest4.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>Boston</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- {/* row 2 */} -->
+                                    <div class='relative overflow-hidden rounded-2xl'>
+                                        <div class="relative  h-80 md:h-64 w-full md:w-56 bg-no-repeat bg-cover rounded-2xl transition-transform duration-300 transform hover:scale-105  flex items-center justify-center "
+                                            style="background-image:url('public/dest9.jpg')">
+                                            <!-- {/* Purple overlay */} -->
+                                            <div
+                                                class="absolute inset-0 bg-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-50">
+                                            </div>
+                                            <h2 class='text-center text-2xl text-white '>Nevada</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- {/* row 3 */} -->
+                                    <div>
+                                        <button onclick="navigateToContactUs()" type="submit"
+                                            class=' p-4 bg-purple-600 rounded-md w-full text-white text-lg cursor-pointer hover:bg-gray-800 hover:transition-bg hover:duration-300 ease-in'>Book
+                                            now</button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- footer section -->
+    <footer class='py-16 bg-slate-100'>
+        <div class='px-3 md:px-20'>
+            <!-- row  -->
+            <div class='md:flex md:gap-20 lg:gap-40'>
+
+                <!-- column 1  -->
+                <div>
+                    <!-- footer heading  -->
+                    <div class='border-b-2 border-purple-600 inline-block'>
+                        <h3 class='font-medium text-lg'>Need any help?</h3>
+                    </div>
+                    <div class='pb-8'>
+                        <div class='mt-6 pl-2 pt-1 border-l-2 border-purple-600'>
+                            <h3 class='font-medium'>Call 24/7 for any help</h3>
+                            <h3 class='pt-2 font-medium text-2xl text-purple-600'>+00 123 456 789</h3>
+                        </div>
+                        <div class='mt-6 pl-2 pt-1 border-l-2 border-purple-600'>
+                            <h3 class='font-medium'>Mail to our support team</h3>
+                            <h3 class='pt-2 font-medium text-2xl text-purple-600'>support@trueflights.com</h3>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- column 2  -->
+                <div>
+                    <!-- footer heading  -->
+                    <div class='border-b-2 border-purple-600 inline-block'>
+                        <h3 class='font-medium text-lg'>Company</h3>
+                    </div>
+                    <div class='py-5'>
+                        <ul>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="aboutUs.html">About Us</a>
+                            </li>
+                            <!-- <li class='pb-4 hover:text-purple-600'>
+                                <a href="faq.html">Faq</a>
+                            </li> -->
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="contactUs.html"> Contact</a>
+                            </li>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="privacyPolicy.html">Privacy Policy</a>
+                            </li>
+                            <li class='pb-4 hover:text-purple-600'>
+                                <a href="t&c.html">Terms & Conditions</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class='py-5 px-3'>
+            <h3 class='text-center font-semibold'>Copyright ©
+                <script>document.write(new Date().getFullYear())</script> All Rights Reserved
+            </h3>
+        </div>
+    </footer>
+
+
+    <!-- Menu for small screen -->
+    <div id="menuBox" class="hideMenu">
+        <div id="mobileMenu" class="transition-transform duration-500 ease-in-out transform  fixed inset-0 z-50">
+            <!-- Dark background overlay -->
+            <div id="darkTheme"
+                class="absolute inset-0 bg-black opacity-70 transform transition-transform duration-500 ease-in-out ">
+            </div>
+
+            <!-- Content -->
+            <div id="menuContent"
+                class="absolute inset-y-0 left-0 w-8/12 bg-white p-4 transform transition-transform duration-1000 ease-in-out ">
+                <div class="flex justify-between">
+                    <div class="inline-block">
+                        <p class="py-2 text-lg font-medium uppercase">True Flights</p>
+                    </div>
+                    <button onclick="closeMobileMenu()">
+                        Close
+                    </button>
+                </div>
+
+                <div>
+                    <ul class="pt-5">
+                        <li class="pb-2"><a href="index.html">Home</a></li>
+                        <li class="pb-2"><a href="aboutUs.html">About</a></li>
+                        <!-- <li class="pb-2"><a href="faq.html">Faq</a></li> -->
+                        <li class="pb-2"><a href="contactUs.html">Contact</a></li>
+                        <li class="pb-2"><a href="privacyPolicy.html">Privacy Policy</a></li>
+                        <li class="pb-2"><a href="t&c.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
